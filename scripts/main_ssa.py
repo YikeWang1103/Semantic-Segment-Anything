@@ -79,6 +79,7 @@ def main(rank, args):
     else:
         raise NotImplementedError()
     print('[Model loaded] Semantic branch (your own segmentor) is loaded.')
+    
     if args.dataset == 'ade20k':
         filenames = [fn_.replace('.jpg', '') for fn_ in os.listdir(args.data_dir) if '.jpg' in fn_]
     elif args.dataset == 'cityscapes' or args.dataset == 'foggy_driving':
